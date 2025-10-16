@@ -46,7 +46,7 @@ AppSalarioCalculavel é um projeto educativo/útil em Java para Android (Android
 
 
 ## Regras de cálculo (especificação exata)
-> **Observação:** Algoritmo usa *taxa flat por faixa* conforme o enunciado. Se optar por progressivo (marginal), documente e inclua testes que ilustrem as diferenças.
+
 
 ### INSS (desconto sobre o salário bruto — flat rate)
 - Até R$ 1.212,00 → **7,5%**  
