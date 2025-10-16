@@ -2,11 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/telaCalculo"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/txtNomeSalario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -20,7 +21,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/txtSalario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -31,7 +32,7 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeSalario" />
 
     <TextView
         android:id="@+id/textView4"
@@ -45,10 +46,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSalario" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/rgOpcoes"
         android:layout_width="126dp"
         android:layout_height="107dp"
         android:layout_marginStart="20dp"
@@ -59,20 +60,20 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/rbFem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="FEMININO" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/rbMas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="MASCULINO" />
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/txtNumFilhos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -83,10 +84,10 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/rgOpcoes" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCalcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -97,7 +98,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNumFilhos" />
 
     <ImageView
         android:id="@+id/imageView3"

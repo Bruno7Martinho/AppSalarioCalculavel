@@ -1,4 +1,4 @@
-package br.ulbra.appsalariocalculabvel;
+package br.ulbra.appsalariocalculavel;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package br.ulbra.appsalariocalculabvel;
+package br.ulbra.appsalariocalculavel;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -17,7 +17,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String str = "CREATE TABLE utilizador(username TEXT PRIMARY KEY, email TEXT, password TEXT);";
+        String str = "CREATE TABLE utilizador(email TEXT, password TEXT);";
         db.execSQL(str);
     }
 
@@ -27,22 +27,22 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public long criarUtilizador(String userName, String password) {
+    public long criarUtilizador(String email, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put("username", userName);
+        cv.put("email", email);
         cv.put("password", password);
         long result = db.insert("utilizador", null, cv);
-        db.close(); // boa prática
+        db.close();
         return result;
     }
 
     public boolean validarLogin(String userName, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = db.rawQuery("SELECT * FROM utilizador WHERE username=? AND password=?", new String[]{userName, password});
+        Cursor c = db.rawQuery("SELECT * FROM utilizador WHERE email=? AND password=?", new String[]{userName, password});
         boolean existe = c.getCount() > 0;
-        c.close();  // importante!
-        db.close(); // importante!
+        c.close();
+        db.close();
         return existe;
     }
 }

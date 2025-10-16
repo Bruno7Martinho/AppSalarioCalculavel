@@ -1,4 +1,4 @@
-package br.ulbra.appsalariocalculabvel;
+package br.ulbra.appsalariocalculavel;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -52,7 +52,7 @@ public class CadastroActivity extends AppCompatActivity {
                 }
 
                 DBHelper dbHelper = new DBHelper(CadastroActivity.this);
-                long resultado = dbHelper.criarUtilizador(nome, senha); // aqui só está salvando nome e senha
+                long resultado = dbHelper.criarUtilizador(email, senha);
 
                 if (resultado == -1) {
                     Toast.makeText(CadastroActivity.this, "Erro: usuário já existe ou falha no cadastro.", Toast.LENGTH_SHORT).show();
@@ -64,5 +64,6 @@ public class CadastroActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 }

@@ -1,4 +1,4 @@
-package br.ulbra.appsalariocalculabvel;
+package br.ulbra.appsalariocalculavel;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
-    EditText txtNomeLogin, txtSenhaLogin;
+    EditText txtEmailLogin, txtSenhaLogin;
     Button btnEntrar;
 
     @Override
@@ -20,18 +20,18 @@ public class LoginActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.login_activity);
 
-        txtNomeLogin = findViewById(R.id.txtNomeLogin);
+        txtEmailLogin = findViewById(R.id.txtEmailLogin);
         txtSenhaLogin = findViewById(R.id.txtSenhaLogin);
         btnEntrar = findViewById(R.id.btnEntrar);
 
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nomeDigitado = txtNomeLogin.getText().toString().trim();
+                String emailDigitado = txtEmailLogin.getText().toString().trim();
                 String senhaDigitada = txtSenhaLogin.getText().toString().trim();
 
                 DBHelper dbHelper = new DBHelper(LoginActivity.this);
-                boolean valido = dbHelper.validarLogin(nomeDigitado, senhaDigitada);
+                boolean valido = dbHelper.validarLogin(emailDigitado, senhaDigitada);
 
                 if (valido) {
                     Toast.makeText(LoginActivity.this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show();

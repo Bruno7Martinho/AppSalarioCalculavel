@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'br.ulbra.appsalariocalculabvel'
+    namespace 'br.ulbra.appsalariocalculavel'
     compileSdk 36
 
     defaultConfig {
