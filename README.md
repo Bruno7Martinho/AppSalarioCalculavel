@@ -53,3 +53,9 @@ AppSalarioCalculavel é um projeto educativo/útil em Java para Android (Android
 - De R$ 1.212,01 até R$ 2.427,35 → **9%**  
 - De R$ 2.427,36 até R$ 3.641,03 → **12%**  
 - De R$ 3.641,04 até R$ 7.087,22 → **14%**
+
+## Como  executar
+1. Clone o repositório:
+```bash
+git clone https://github.com/Bruno7Martinho/AppSalarioCalculavel
+
